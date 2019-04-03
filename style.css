@@ -1,0 +1,335 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+html {
+    height: 100%;
+}
+.container {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    
+}
+.leftBarFixed {
+    position: relative;
+    width:200px;
+    height:100%;  
+    overflow-x:hidden;
+    overflow-y: auto;
+}
+.leftBar {
+    position: relative;
+    width:200px;
+    height:100%;
+    background-color:#202020;
+}
+.rightBarFixed{
+    position: absolute;
+    min-height:620px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+.rightBar {
+    position: relative;
+    width: 87%;
+    height: 100%;
+    background-color: #222326;
+    padding: 10px 20px 20px;
+    box-sizing: border-box;
+    overflow-x:hidden;
+    overflow-y: auto;
+}
+.section {
+    display: flex;
+    flex-direction: column;
+}
+.newsection {
+    display: flex;
+    flex-direction: column;
+}
+#header{
+    width: 80px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color:white ;
+    margin: 5px auto;
+}
+hr {
+    margin: 2px 5px 0 5px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+#textareaLabel {
+    position: relative;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+#fileName {
+    position: relative;
+    height: 35px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    font-family: 'Inconsolata', monospac;
+    background-color: #222326;
+    font-size: 16px;
+    resize: none;
+    color: white;
+    outline: 0;
+    margin-bottom: 5px;
+}
+textarea {
+    position: relative;
+    height: 90px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    font-family: 'Inconsolata', monospac;
+    background-color: #222326;
+    font-size: 16px;
+    resize: none;
+    color: white;
+    outline: 0;
+    margin-bottom: 5px;
+}
+#myButton {
+    align-self: flex-end;
+    position: relative;
+    padding: 10px 20px;
+    color: white !important;
+    background: #222326;
+    border:solid 1px white;
+    outline: 0;
+    display: inline-block;
+}
+#myButton:hover {
+    color: black !important;
+    background: white;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.deleteButton {
+    background-image: url(images/trash.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    cursor: pointer;
+    margin-top:10px;
+    height: 25px;
+    width: 25px;
+    outline: none;
+    vertical-align: middle;
+    display: none;
+}
+.updateButton {
+    background-image: url(images/update.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    cursor: pointer;
+    width: 25px;
+    margin-top:10px;
+    margin-left: 20px;
+    outline: none;
+    vertical-align: middle;
+    display: none;
+}
+#onBackButton {
+    align-self: flex-start;
+    position: relative;
+    padding: 10px 20px;
+    color: #494949 !important;
+    background: #ffffff;
+    border: 0;
+    outline: 0;
+    display: inline-block;
+    display: none;
+}
+#onBackButton:hover{
+    color: #ffffff !important;
+    background: #f6b93b;
+    transition: all 0.2s ease 0s;
+    cursor: pointer;
+}
+.labelDiv {
+    width: 100%;
+    display: flex;
+}
+#inputLabel {
+    position: relative;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+#mode {
+    align-self: flex-end;
+    max-width: 250px;
+    max-height: 20px;
+    height: 20px;
+    background-color: #282a36;
+    color: white;
+    border: none;
+}
+.CodeMirror {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+    height: 60vh;
+}
+.alert {
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    display: none;
+    transition: all 2s;
+}  
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.closebtn:hover {
+    color: white;
+}
+#myInput {
+    background-image: url('images/searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    margin-top: 5px;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #202020;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+	
+    width:calc(100% - 60px);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    position: relative;
+    padding: 4px 4px 4px 40px;
+    list-style-type: none;
+    font-size: 16px;
+    user-select: none;
+    background-color:#202020;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin: 15px 8px 8px;
+}
+ul li:hover {
+    background:#686868;
+}
+ul#myUL li.python {
+    background-image: url('images/python.png');
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: left; 
+} 
+ul#myUL li.javascript {
+    background-image: url('images/javascript.png');
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: left; 
+}
+ul#myUL li.xml {
+    background-image: url('images/html.png');
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: left; 
+}
+ul#myUL li.css {
+    background-image: url('images/css.png');
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: left; 
+}       
+ul#myUL li.r {
+    background-image: url('images/r.png');
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: left;
+}  
+ul#myUL li.sql {
+    background-image: url('images/sql.png');
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: left;
+}
+ul#myUL li.go {
+    background-image: url('images/go.png');
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: left; 
+}           
+ ul#myUL li.r {
+    background-image: url('images/r.png');
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: left;
+}
+ul#myUL li.abap {
+    background-image: url('images/sap.png');
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: left;
+}
+#newRepo {
+    background-image: url('images/folder.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    width:calc(100% - 60px);
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    padding: 4px 4px 4px 40px;
+    list-style-type: none;
+    font-size: 16px;
+    user-select: none;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin: 15px 8px 8px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #282a36; 
+}
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+#crudOperationDiv {
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+}

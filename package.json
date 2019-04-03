@@ -1,0 +1,21 @@
+{
+  "name": "cssave",
+  "productName": "Snippets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-win32": "electron-packager . --out=dist --platform=win32 --arch=ia32 --icon=images/desktopIcon.ico --app-copyright=\"Copyright (c) 2019, Eyüp Bayçöl\" --ignore=\"/dist/(win|mac|linux)\" --overwrite",
+    "package-win64": "electron-packager . --out=dist --platform=win32 --arch=x64 --icon=images/desktopIcon.ico --app-copyright=\"Copyright (c) 2019, Eyüp Bayçöl\" --ignore=\"/dist/(win|mac|linux)\" --overwrite",
+    "package-mac": "electron-packager . --out=dist --platform=darwin --arch=x64 --icon=images/desktopIcon.icns --app-copyright=\"Copyright (c) 2019, Eyüp Bayçöl\" --ignore=\"/dist/(win|mac|linux)\" --overwrite",
+    "package-linux": "electron-packager . --out=dist --platform=linux --arch=x64 --icon=src/icons/icon.png --app-copyright=\"Copyright (c) 2019, Eyüp Bayçöl\" --ignore=\"/dist/(win|mac|linux)\" --overwrite",
+    "release": "npm run package-win32 && npm run package-win64 && npm run package-mac && npm run package-linux" 
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.0.5",
+    "electron-packager": "^13.1.0"
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="codemirror/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+    <script src="codemirror/mode/javascript/javascript.js"></script>
+    <script src="codemirror/mode/xml/xml.js"></script>
+    <script src="codemirror/mode/css/css.js"></script>
+    <script src="codemirror/mode/python/python.js"></script>
+    <script src="codemirror/mode/r/r.js"></script>
+    <script src="codemirror/mode/sql/sql.js"></script>
+    <script src="codemirror/mode/go/go.js"></script>
+    <script src="codemirror/mode/abap/abap.js"></script>
+    <script src="codemirror/addon/edit/closetag.js"></script>
+    <script src="codemirror/addon/selection/active-line.js"></script>
+    <link href="codemirror/theme/dracula.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="leftBar">
+            <div class="leftBarFixed">
+                <div id="header">Snippets</div>
+                <hr />
+                <a onclick="onBackFunction()">
+                    <div id="newRepo">New File</div>
+                </a>
+                <input type="text" id="myInput" placeholder="Search for names.." title="Type in a name">
+                <ul id="myUL">
+                </ul>
+            </div>
+        </div>
+        <div class="rightBar">
+            <div class="rightBarFixed">
+                <div class="section">
+                    <select id="mode" onChange="selectMode()">
+                        <option value="python">Python</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="xml">HTML</option>
+                        <option value="css">Css</option>
+                        <option value="r">R</option>
+                        <option value="sql">Sql</option>
+                        <option value="go">Go</option>
+                        <option value="abap">Abap</option>
+                    </select>
+                    <label id="inputLabel">Title:</label>
+                    <input type="text" id="fileName" />
+                </div>
+                <div class="newsection">
+                    <label id="inputLabel">Description:</label>
+                    <textarea id="description"></textarea>
+                </div>
+                <div class="newsection">
+                    <textarea id="textarea"></textarea>
+                </div>
+                <div id="crudOperationDiv">
+                    <input type="button" class="deleteButton" title="Delete" onclick="deleteFunction()" />
+                    <input type="button" class="updateButton" title="Update" onclick="updateFunction()" />
+                </div>
+                <button id="myButton" onclick="saveCode()">Save</button>
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <div id="error1">
+                        <strong>Warning!</strong> Please Do not leave empty area.
+                    </div>
+                    <div id="error2">
+                        <strong>Warning!</strong> This file name is being used.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
